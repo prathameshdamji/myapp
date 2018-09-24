@@ -21,4 +21,4 @@ COPY tslint.json .
 
 CMD ["ng","serve","--port=3000"]
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/sh"]
