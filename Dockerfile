@@ -1,24 +1,7 @@
-FROM node
+FROM nginx:alpine
 
-RUN mkdir -p /application 
+COPY nginx.conf /etc/nginx.conf
 
-WORKDIR /application
+WORKDIR /usr/shar/nginx/html
 
-RUN npm install @angular/cli
-
-RUN npm install
-
-COPY e2e .
-COPY src .
-COPY .editorconfig .
-COPY .gitignore .
-
-COPY angular.json .
-COPY package-lock.json .
-COPY package.json .
-COPY tsconfig.json .
-COPY tslint.json .
-
-CMD ["ng","serve","--port=3000"]
-
-ENTRYPOINT ["/bin/bash"]
+COPY dist/ .

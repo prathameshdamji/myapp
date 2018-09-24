@@ -10,7 +10,7 @@ node{
         sh 'docker push dockerpd/myapp:latest'
     }
     stage('Run Container'){
-        sh 'docker run dockerpd/myapp:latest'
+        sh 'docker run -p 3000:80 dockerpd/myapp'
     }
     stage('Listing Docker Images & Containers'){
         sh 'docker images'
