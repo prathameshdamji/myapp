@@ -19,6 +19,4 @@ COPY package.json .
 COPY tsconfig.json .
 COPY tslint.json .
 
-CMD ["ng","serve","--port=3000"]
-
-ENTRYPOINT ["/bin/sh"]
+RUN ng serve --port=3000
