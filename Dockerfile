@@ -6,8 +6,6 @@ WORKDIR /application
 
 RUN npm install @angular/cli
 
-RUN cd application
-
 RUN npm install
 
 COPY e2e .
@@ -21,4 +19,5 @@ COPY package.json .
 COPY tsconfig.json .
 COPY tslint.json .
 
+ENTRYPOINT
 CMD ["ng","serve","--port=3000"]
