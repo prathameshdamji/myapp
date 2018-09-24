@@ -18,5 +18,3 @@ COPY package-lock.json .
 COPY package.json .
 COPY tsconfig.json .
 COPY tslint.json .
-
-RUN ng serve --port=3000
