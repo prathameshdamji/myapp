@@ -19,5 +19,6 @@ COPY package.json .
 COPY tsconfig.json .
 COPY tslint.json .
 
-ENTRYPOINT
 CMD ["ng","serve","--port=3000"]
+
+ENTRYPOINT ["/bin/bash"]
